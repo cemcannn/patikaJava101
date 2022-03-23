@@ -1,3 +1,5 @@
+package NotOrtalamasiHesaplayanProgram;
+
 import java.util.Scanner;
 
 public class NotOrtalamasiHesaplayanProgram {
