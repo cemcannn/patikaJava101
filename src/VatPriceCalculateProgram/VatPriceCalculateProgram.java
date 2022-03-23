@@ -12,7 +12,5 @@ public class VatPriceCalculateProgram {
         boolean condition = price < 1000;
         double priceIncludedVat = condition ? price + (price * vatHigh /100) : price + (price * vatLow /100);
         System.out.println("Price included vat " + priceIncludedVat + " TL");
-
-
     }
 }
