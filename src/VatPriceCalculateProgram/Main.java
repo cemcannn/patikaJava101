@@ -2,7 +2,7 @@ package VatPriceCalculateProgram;
 
 import java.util.Scanner;
 
-public class VatPriceCalculateProgram {
+public class Main {
     public static void main(String[] args) {
         double vatHigh = 18;
         double vatLow = 8;

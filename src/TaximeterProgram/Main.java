@@ -2,7 +2,7 @@ package TaximeterProgram;
 
 import java.util.Scanner;
 
-public class TaximeterProgram {
+public class Main {
     public static void main(String[] args) {
         int distance;
         Scanner input = new Scanner(System.in);

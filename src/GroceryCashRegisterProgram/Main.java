@@ -2,7 +2,7 @@ package GroceryCashRegisterProgram;
 
 import java.util.Scanner;
 
-public class GroceryCashRegisterProgram {
+public class Main {
     public static void main(String[] args) {
         float pearPrice = 2.14f, applePrice = 3.67f, tomatoPrice = 1.11f, bananaPrice = 0.95f, eggplantPrice = 5.99f;
 
