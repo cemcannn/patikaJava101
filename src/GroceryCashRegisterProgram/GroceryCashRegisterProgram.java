@@ -17,7 +17,7 @@ public class GroceryCashRegisterProgram {
         int bananaAmount = input.nextInt();
         System.out.print("How much kilos of eggplants do you want : ");
         int eggplantAmount = input.nextInt();
-        double totalNetPrice = (pearPrice*pearAmount)+(applePrice*appleAmount)+(tomatoPrice*tomatoAmount)+(bananaPrice*bananaAmount)+(eggplantPrice*eggplantAmount);
+        double totalNetPrice = (pearPrice * pearAmount) + (applePrice * appleAmount) + (tomatoPrice * tomatoAmount) + (bananaPrice * bananaAmount) + (eggplantPrice * eggplantAmount);
         System.out.println(totalNetPrice);
     }
 }
