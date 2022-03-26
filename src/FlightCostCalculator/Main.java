@@ -35,7 +35,6 @@ public class Main {
                     System.out.println("Invalid input");
                 }
             }
-
             else if ((age>=12) && (age<=24)) {
                 if (typeOfFlight == 1) {
                     price = distance * cost;
@@ -54,7 +53,6 @@ public class Main {
                     System.out.println("Invalid input");
                 }
             }
-
             else if ((age>24) && (age<=65)) {
                 if (typeOfFlight == 1) {
                     price = distance * cost;
@@ -71,7 +69,6 @@ public class Main {
                     System.out.println("Invalid input");
                 }
             }
-
             else if (age>65) {
                 if (typeOfFlight == 1) {
                     price = distance * cost;
@@ -90,12 +87,10 @@ public class Main {
                     System.out.println("Invalid input");
                 }
             }
-
             else {
                 System.out.println("Invalid input");
             }
         }
-
         else {
             System.out.println("Invalid input");
         }
