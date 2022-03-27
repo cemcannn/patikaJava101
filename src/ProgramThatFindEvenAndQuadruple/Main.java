@@ -19,6 +19,6 @@ public class Main {
             }
         } while (value%2==0);
         System.out.println(even!=0 ? "Even numbers : " + even : "There is no even number.");
-        System.out.println(divisibleFour!=0 ? "Divisible by four : " + divisibleFour : "There is no divisible by four.");
+        System.out.println(divisibleFour!=0 ? "Divisible by four numbers : " + divisibleFour : "There is no divisible by four.");
     }
 }
