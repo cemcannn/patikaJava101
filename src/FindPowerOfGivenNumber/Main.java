@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int n, k, sum=1;
+        int n, k, result=1;
 
         Scanner input = new Scanner(System.in);
         System.out.print("Please input 'n' value : ");
@@ -13,8 +13,8 @@ public class Main {
         k = input.nextInt();
 
         for (int i = 1; i<=k; ++i){
-            sum*=n;
+            result*=n;
         }
-        System.out.println("summary : " + sum);
+        System.out.println("Result : " + result);
     }
 }
