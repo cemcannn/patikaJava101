@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Please input 'n' value : ");
+        System.out.print("Please Input 'n' value : ");
         int n = input.nextInt();
 
         for(int i = 1; i <= (n/2)-1; i++) {
