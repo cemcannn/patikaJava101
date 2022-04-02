@@ -1,4 +1,4 @@
-package RectangleStarPattern;
+package TriangleStarPattern;
 
 import java.util.Scanner;
 
