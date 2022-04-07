@@ -1,7 +1,7 @@
 package PalindromicNumber;
 
 public class Main {
-    static boolean isPalindromic(int number) {
+    static String isPalindromic(int number) {
         int temp = number, reverseNumber = 0, lastDigit;
         while(temp!=0) {
             System.out.println("===========================");
@@ -13,14 +13,14 @@ public class Main {
             temp = temp/10;
         }
         if(reverseNumber==number) {
-            System.out.println("Number is Palindromic");
+            return "Number is Palindromic";
         }
         else{
-            System.out.println("Number isn't Palindromic");
+            return "Number isn't Palindromic";
         }
-        return true;
+
     }
     public static void main(String[] args) {
-        isPalindromic(222);
+        System.out.println(isPalindromic(222));
     }
 }
