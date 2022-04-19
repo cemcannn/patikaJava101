@@ -1,25 +1,34 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int[] arr = {15, 12, 788, 1, -1, -778, 2, 0};
-        Arrays.sort(arr);
-        int sum = 0;
-        int sum1 = 0;
-        System.out.print("Girilen sayı : ");
-        int num = input.nextInt();
-        for (int i : arr) {
-            if (num > i) {
-                sum = i;
-            }
-            if (num < i) {
-                sum1 = i;
-                break;
-            }
+
+    public static boolean canWin(int leap, int[] game, int j) {
+        // Return true if you can win the game; otherwise, return false.
+        if(j<0 || game[j]==1) {
+            return false;
         }
-        System.out.println("Girilen sayıdan küçük en yakın sayı : " + sum);
-        System.out.println("Girilen sayıdan büyük en yakın sayı : " + sum1);
+        if(j==game.length-1 || j+leap>=game.length) {
+            return true;
+        }
+        game[j]=1;
+        return canWin(leap, game, j+1) || canWin(leap, game, j-1) || canWin(leap, game, j+leap);
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int j = 0;
+        int q = scan.nextInt();
+        while (q-- > 0) {
+            int n = scan.nextInt();
+            int leap = scan.nextInt();
+
+            int[] game = new int[n];
+            for (int i = 0; i < n; i++) {
+                game[i] = scan.nextInt();
+            }
+
+            System.out.println( (canWin(leap, game,j)) ? "YES" : "NO" );
+        }
+        scan.close();
     }
 }
