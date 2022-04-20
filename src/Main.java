@@ -1,34 +1,27 @@
+import java.io.*;
 import java.util.*;
 
 public class Main {
 
-    public static boolean canWin(int leap, int[] game, int j) {
-        // Return true if you can win the game; otherwise, return false.
-        if(j<0 || game[j]==1) {
-            return false;
-        }
-        if(j==game.length-1 || j+leap>=game.length) {
-            return true;
-        }
-        game[j]=1;
-        return canWin(leap, game, j+1) || canWin(leap, game, j-1) || canWin(leap, game, j+leap);
-    }
-
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int j = 0;
-        int q = scan.nextInt();
-        while (q-- > 0) {
-            int n = scan.nextInt();
-            int leap = scan.nextInt();
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int[] A = new int[n];
+        int count = 0;
 
-            int[] game = new int[n];
-            for (int i = 0; i < n; i++) {
-                game[i] = scan.nextInt();
-            }
-
-            System.out.println( (canWin(leap, game,j)) ? "YES" : "NO" );
+        for(int i = 0; i<n; i++) {
+            A[i] = input.nextInt();
         }
-        scan.close();
+        for(int j = 0; j<n; j++) {
+            int sum = 0;
+            for(int k = j; k<n; k++) {
+                sum = sum + A[k];
+                if(sum<0) {
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
+        input.close();
     }
 }
