@@ -1,27 +1,24 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
-public class Main {
+class Main {
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        int[] A = new int[n];
-        int count = 0;
-
-        for(int i = 0; i<n; i++) {
-            A[i] = input.nextInt();
-        }
-        for(int j = 0; j<n; j++) {
-            int sum = 0;
-            for(int k = j; k<n; k++) {
-                sum = sum + A[k];
-                if(sum<0) {
-                    count++;
-                }
+    public static String MatrixSpiral(String[] strArr) {
+        for(String element : strArr) {
+            for(int i = 0; i<element.length();i++) {
+                System.out.println(i);
             }
+
         }
-        System.out.println(count);
-        input.close();
+
+        // code goes here
+        return strArr[0];
     }
+
+    public static void main (String[] args) {
+        // keep this function call here
+        Scanner s = new Scanner(System.in);
+        System.out.print(MatrixSpiral(new String[] {"[1, 2]", "[10, 14]"}));
+    }
+
 }
